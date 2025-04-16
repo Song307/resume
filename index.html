@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>송하성 이력서</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .menu-toggle {
+      display: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1100;
+      background: teal;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #fff;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+      overflow-y: auto;
+      height: 100vh;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: teal;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    .sidebar ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .sidebar ul li a.active {
+      font-weight: bold;
+      color: teal;
+    }
+
+    .sidebar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px;
+      background-color: #fff;
+      overflow-y: auto;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      border-bottom: 2px solid #000;
+      padding-bottom: 5px;
+      font-size: 20px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .highlight {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .subinfo {
+      color: #555;
+    }
+
+    .photo {
+      width: 150px;
+      height: 150px;
+      border: 2px solid #ccc;
+      object-fit: cover;
+    }
+
+    a {
+      color: teal;
+      text-decoration: none;
+    }
+
+    .url-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f0f0f0;
+      font-family: monospace;
+      word-break: break-all;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        z-index: 1000;
+        background: white;
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      body {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-toggle" onclick="toggleMenu()">☰ 메뉴</div>
+  <div class="sidebar">
+    <h3><a href="#basic">기본 정보</a></h3>
+    <ul>
+      <li><a href="#skills">기술 스택</a></li>
+      <li><a href="#career">경력</a></li>
+      <li><a href="#portpolio">포트폴리오</a></li>
+      <li><a href="#education">교육</a></li>
+      <li><a href="#cerificate">수상 및 자격</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="section" id='basic'>
+      <div class="profile">
+        <div>
+          <div class="highlight">송하성 이력서</div>
+          <div class="subinfo">프론트엔드, 백앤드 개발자</div>
+          <p>이메일: ssongsyj0203@gmail.com</p>
+          <p>
+            노션 이력서:  
+            <a href="https://www.notion.so/ssongha/1d0af03399e780309dcad6a5856945eb?pvs=4" target="_blank">
+              Notion 이력서 링크
+            </a>
+          </p>
+        </div>
+        <img src="profile.jpg" alt="프로필 사진" class="photo" />
+      </div>
+      
+
+      <div class="github" style="display: flex; gap: 50px;">
+        <a href="https://github.com/Song307s">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+              </svg>    
+        </a>
+        <a href="https://github.com/Song307"><h1>Github</h1></a>
+      </div>
+
+    </div>
+
+    <div class="section" id="skills">
+      <h2>기술 스택</h2>
+      <p><strong>Front End</strong> : Next.js, React, TypeScript, HTML5/CSS, React Query</p>
+      <p><strong>Backt End</strong> : Spring, Java, 실시간 채팅 서버 </p>
+      <p><strong>시스템(인프라) 엔지니어</strong> : Linux, C, Raspberry PI, Arduino, TCP/IP 소켓프로그래밍, AWS, 보안</p>
+      <p><strong>AR/VR</strong> : Unity, C#</p>
+      <p><strong>DB</strong> : MySQL, Oracle, MariaDB</p>
+    </div>
+
+    <div class="section" id="career">
+      <h2>경력</h2>
+      <p><strong>졸업작품 프로젝트</strong> - 손 동작 인식을 통한 재활 솔루션 개발 / 프론트엔드 개발 (2025.03 ~ 2025.10, 8개월)</p>
+      <p>∙ 요구사항 분석 및 DataBase 모델링</p>
+      <p>∙ AWS를 활용한 컴퓨팅 환경 구축</p>
+      <p><strong>실시간 채팅 프로젝트(C, pThread, Linux, Raspberry PI)</strong> pThread를 활용한 채팅 서버 구현</p>
+      <p>∙ Raspberry PI의 Raspberry OS(Debian Linux)에서 pThread를 활용한 채팅 서버 구현</p>
+      <p>∙ TCP/IP Socket Programming</p>
+    </div>
+
+    <div class="section" id="portpolio">
+        <h2>포트폴리오</h2>
+        <p><strong>동아리 홈페이지(Front) URL</strong> </p>
+        <div class="url-box">
+            https://github.com/Song307/dmu_proj_can
+        </div>
+        <br><a href="https://dmu-can.netlify.app/"> https://dmu-can.netlify.app/ </a>
+
+        <p><strong>프론트엔트 포트폴리오 URL</strong> </p>
+        <div class="url-box">
+            https://github.com/Song307/ReactWeb_1
+        </div>
+        <br><a href="https://github.com/Song307/ReactWeb_1">https://github.com/Song307/ReactWeb_1</a>
+
+        <p><strong>항공권 조회사이트 포트폴리오 URL</strong> </p>
+        <div class="url-box">
+            https://github.com/myth0629/Backend
+        </div>
+        <br><a href="https://github.com/myth0629/Backend">https://github.com/myth0629/Backend</a>
+        
+
+    </div>
+
+    <div class="section" id="education">
+        <h2>교육</h2>
+        <p><strong>동양고등학교</strong> - (2018.03-2021.2)</p>
+        <p><strong>동양미래대학교</strong> - 컴퓨터소프트웨어공학과 (2021.03-2026.2)</p>
+        
+    </div>
+
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const navLinks = document.querySelectorAll('.sidebar ul li a');
+    const content = document.querySelector('.content');
+
+    content.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (content.scrollTop >= sectionTop - 100) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
