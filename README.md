@@ -1,14 +1,12 @@
-# 📄 이력서
+```mermaid
+gantt
+  title Project Timeline
+  dateFormat  YYYY-MM-DD
+  section Phase 1
+  Task 1           :done,    t1, 2023-01-01, 2023-01-15
+  Task 2           :active,  t2, 2023-01-16, 2023-01-30
+  section Phase 2
+  Task 3           :         t3, 2023-02-01, 2023-02-15
+  Task 4           :crit,    t4, 2023-02-16, 2023-02-28
 
-<button style="border: 2px solid #0073e6; padding: 10px; border-radius: 8px; text-align: center;">
-  🔗 <a href="https://song307.github.io/resume/" target="_blank" style="text-decoration: none; color: #0073e6; font-weight: bold;">이력서 바로보기</a>
-</button>
-
----
-
-## 💼 주요 기술
-- **사용 가능 기술**: JavaScript, Node.js, React, Spring Boot 등
-
----
-
-이력서에서 더 많은 정보를 확인하실 수 있습니다!
+```
